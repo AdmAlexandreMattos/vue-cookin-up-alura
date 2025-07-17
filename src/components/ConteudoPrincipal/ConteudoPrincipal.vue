@@ -15,7 +15,8 @@ export default {
 
       <ul class="ingredientes-sua-lista">
         <li
-          v-for="ingrediente in ['Alho', 'Manteiga', 'Orégano']"
+          v-for="ingrediente in ingredientes"
+          :key="ingrediente"
           class="ingrediente"
         >
           {{ ingrediente }}
