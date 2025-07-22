@@ -1,6 +1,6 @@
 <script lang="ts">
 import { obterReceitas } from "@/http";
-import type IReceita from "@/interfaces/IReceita";
+import type IReceita from "@/Interfaces/IReceita";
 import BotaoPrincipal from "../BotaoPrincipal/BotaoPrincipal.vue";
 import CardReceita from "../CardReceita/CardReceita.vue";
 import type { PropType } from "vue";

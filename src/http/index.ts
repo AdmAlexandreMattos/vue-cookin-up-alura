@@ -1,5 +1,5 @@
-import type ICategoria from "@/interfaces/ICategoria";
-import type IReceita from "@/interfaces/IReceita";
+import type ICategoria from "@/Interfaces/ICategoria";
+import type IReceita from "@/Interfaces/IReceita";
 
 async function obterDadosURL<T>(url: string) {
   const resposta = await fetch(url);
