@@ -2,7 +2,7 @@
 
 Projeto desenvolvido durante o curso de Vue 3 da **Alura**, com foco na construção de interfaces com componentes reutilizáveis, diretivas, reatividade e boas práticas no desenvolvimento com **TypeScript** e **Vite**.
 
-🔗 [Curso de Vue 3: entendendo componentes, diretivas e reatividade no framework](https://cursos.alura.com.br/course/vue-3-entendendo-componentes-diretivas-reatividade)
+🔗 [Curso de Vue 3: entendendo componentes, diretivas e reatividade no framework](https://cursos.alura.com.br/course/vue-3-componentes-diretivas-reatividade-framework)
 
 ---
 
