@@ -13,6 +13,12 @@ export default {
     adicionarIngrediente(ingrediente: string) {
       this.ingredientes.push(ingrediente);
     },
+
+    removerIngrediente(ingrediente: string) {
+      this.ingredientes = this.ingredientes.filter(
+        (iLista) => ingrediente !== iLista
+      );
+    },
   },
 };
 </script>
@@ -23,6 +29,7 @@ export default {
 
     <SelecionarIngredientes
       @ingrediente-selecionado="adicionarIngrediente($event)"
+      @ingrediente-removido="removerIngrediente($event)"
     />
   </main>
 </template>
