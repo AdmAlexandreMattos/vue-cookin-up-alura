@@ -39,17 +39,19 @@ export default {
   <main class="conteudo-principal">
     <ListaIngredientesUsuario :ingredientes="ingredientes" />
 
-    <SelecionarIngredientes
-      v-if="conteudo === 'SelecionarIngredientes'"
-      @ingrediente-selecionado="adicionarIngrediente($event)"
-      @ingrediente-removido="removerIngrediente($event)"
-      @buscar-receitas="navegar('MostrarReceitas')"
-    />
+    <KeepAlive include="SelecionarIngredientes">
+      <SelecionarIngredientes
+        v-if="conteudo === 'SelecionarIngredientes'"
+        @ingrediente-selecionado="adicionarIngrediente($event)"
+        @ingrediente-removido="removerIngrediente($event)"
+        @buscar-receitas="navegar('MostrarReceitas')"
+      />
 
-    <MostrarReceitas
-      v-else-if="conteudo === 'MostrarReceitas'"
-      @editar-receitas="navegar('SelecionarIngredientes')"
-    />
+      <MostrarReceitas
+        v-else-if="conteudo === 'MostrarReceitas'"
+        @editar-receitas="navegar('SelecionarIngredientes')"
+      />
+    </KeepAlive>
   </main>
 </template>
 

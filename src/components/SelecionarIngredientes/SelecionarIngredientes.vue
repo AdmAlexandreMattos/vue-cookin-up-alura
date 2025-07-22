@@ -1,10 +1,11 @@
 <script lang="ts">
 import { obterCategorias } from "@/http";
-import type ICategoria from "@/Interfaces/ICategoria";
+import type ICategoria from "@/interfaces/ICategoria";
 import CardCategoria from "../CardCategoria/CardCategoria.vue";
 import BotaoPrincipal from "../BotaoPrincipal/BotaoPrincipal.vue";
 
 export default {
+  name: "SelecionarIngredientes",
   data() {
     return {
       categorias: [] as ICategoria[],
