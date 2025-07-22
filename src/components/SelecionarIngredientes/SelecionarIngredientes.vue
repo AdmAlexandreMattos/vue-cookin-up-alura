@@ -1,11 +1,17 @@
 <script lang="ts">
 import { obterCategorias } from "@/http";
+import type ICategoria from "@/Interfaces/ICategoria";
 
 export default {
   data() {
     return {
-      categorias: obterCategorias(),
+      categorias: [] as ICategoria[],
     };
+  },
+  created() {
+    obterCategorias().then((categorias) => {
+      this.categorias = categorias;
+    });
   },
 };
 </script>
@@ -19,7 +25,9 @@ export default {
     </p>
 
     <ul class="categorias">
-      <li v-for="categoria in categorias" :key="categoria.nome"></li>
+      <li v-for="categoria in categorias" :key="categoria.nome">
+        {{ categoria.nome }}
+      </li>
     </ul>
 
     <p class="paragrafo dica">
