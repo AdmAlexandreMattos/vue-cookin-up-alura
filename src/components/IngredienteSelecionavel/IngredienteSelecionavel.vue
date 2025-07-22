@@ -17,15 +17,21 @@ export default {
       selecionado: false,
     };
   },
+  methods: {
+    aoClicar() {
+      this.selecionado = !this.selecionado;
+
+      if (this.selecionado) {
+        this.$emit("ingrediente-selecionado", this.ingrediente);
+      }
+    },
+  },
+  emits: ["ingrediente-selecionado"],
 };
 </script>
 
 <template>
-  <button
-    class="ingrediente"
-    @click="selecionado = !selecionado"
-    :aria-pressed="selecionado"
-  >
+  <button class="ingrediente" @click="aoClicar()" :aria-pressed="selecionado">
     <Tag :texto="ingrediente" :ativa="selecionado" />
   </button>
 </template>
