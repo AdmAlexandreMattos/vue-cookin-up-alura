@@ -11,7 +11,7 @@ export default {
   components: {
     IngredienteSelecionavel,
   },
-  emits: ["ingrediente-selecionado"],
+  emits: ["ingrediente-selecionado", "ingrediente-removido"],
 };
 </script>
 
@@ -30,6 +30,7 @@ export default {
         <IngredienteSelecionavel
           :ingrediente="ingrediente"
           @ingrediente-selecionado="$emit('ingrediente-selecionado', $event)"
+          @ingrediente-removido="$emit('ingrediente-removido', $event)"
         />
       </li>
     </ul>

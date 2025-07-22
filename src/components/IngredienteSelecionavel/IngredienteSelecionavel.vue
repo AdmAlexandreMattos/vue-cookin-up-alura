@@ -23,10 +23,12 @@ export default {
 
       if (this.selecionado) {
         this.$emit("ingrediente-selecionado", this.ingrediente);
+      } else {
+        this.$emit("ingrediente-removido", this.ingrediente);
       }
     },
   },
-  emits: ["ingrediente-selecionado"],
+  emits: ["ingrediente-selecionado", "ingrediente-removido"],
 };
 </script>
 
