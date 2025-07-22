@@ -19,7 +19,7 @@ export default {
     CardCategoria,
     BotaoPrincipal,
   },
-  emits: ["ingrediente-selecionado", "ingrediente-removido"],
+  emits: ["ingrediente-selecionado", "ingrediente-removido", "buscar-receitas"],
 };
 </script>
 
@@ -45,7 +45,10 @@ export default {
       *Atenção: consideramos que você tem em casa sal, pimenta e água.
     </p>
 
-    <BotaoPrincipal texto="Buscar receitas!" />
+    <BotaoPrincipal
+      texto="Buscar receitas!"
+      @click="$emit('buscar-receitas')"
+    />
   </section>
 </template>
 
