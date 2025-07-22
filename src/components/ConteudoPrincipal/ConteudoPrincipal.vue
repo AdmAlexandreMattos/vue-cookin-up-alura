@@ -48,11 +48,7 @@ export default {
 
     <MostrarReceitas
       v-else-if="conteudo === 'MostrarReceitas'"
-<<<<<<< Updated upstream
-      :ingredientes="ingredientes"
-=======
       @editar-receitas="navegar('SelecionarIngredientes')"
->>>>>>> Stashed changes
     />
   </main>
 </template>
