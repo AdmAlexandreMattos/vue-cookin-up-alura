@@ -5,10 +5,15 @@ import ListaIngredientesUsuario from "../ListaIngredientesUsuario/ListaIngredien
 export default {
   data() {
     return {
-      ingredientes: ["Alho", "Manteiga", "Orégano"],
+      ingredientes: [] as string[],
     };
   },
   components: { SelecionarIngredientes, ListaIngredientesUsuario },
+  methods: {
+    adicionarIngrediente(ingrediente: string) {
+      this.ingredientes.push(ingrediente);
+    },
+  },
 };
 </script>
 
@@ -16,7 +21,9 @@ export default {
   <main class="conteudo-principal">
     <ListaIngredientesUsuario :ingredientes="ingredientes" />
 
-    <SelecionarIngredientes />
+    <SelecionarIngredientes
+      @ingrediente-selecionado="adicionarIngrediente($event)"
+    />
   </main>
 </template>
 

@@ -17,6 +17,7 @@ export default {
   components: {
     CardCategoria,
   },
+  emits: ["ingrediente-selecionado"],
 };
 </script>
 
@@ -30,7 +31,10 @@ export default {
 
     <ul class="categorias">
       <li v-for="categoria in categorias" :key="categoria.nome">
-        <CardCategoria :categoria="categoria" />
+        <CardCategoria
+          :categoria="categoria"
+          @ingrediente-selecionado="$emit('ingrediente-selecionado', $event)"
+        />
       </li>
     </ul>
 
